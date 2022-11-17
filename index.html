@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet Digital</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;0,900;1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+        .text-raleway{
+            font-family: 'Raleway', sans-serif;
+        }
+        .text1{
+            font-weight: 500;
+            font-size: 50px;
+            color: #162b4e;
+        }
+        .text-comfortaa{
+            font-family: 'Comfortaa', cursive;
+        }
+        .text2{
+            font-weight: 900;
+            font-size: 80px;
+            line-height: 1px;
+            color: #162b4e;
+        }
+        .titulos{
+            font-weight: 700;
+            font-size: 50px;
+            line-height: normal;
+            color: #162b4e;
+        }
+        .contenedor{
+            background-image: url('./images/backgroundCarnetPc.jpg');
+            margin: 10px 10px 10px 10px;
+        }
+        .text-data{
+            font-weight: 500;
+            font-size: 30px;
+            color: #162b4e;
+        }
+        .text-footer{
+            font-weight: 800;
+            font-size: 20px;
+            color: #162b4e;
+            line-height: normal;
+        }
+        .intro-content{
+            max-width: 500px;
+            position: flex ;
+            top: 50%;
+        }
+        .headerTabla{
+            width: 100%;
+            height: 40px;
+            background-color: #162b4e;
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+        .ContenedorTabla{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <v-app>
+          <v-main>
+            <v-container >
+                <v-img class="rounded-lg elevation-20" src="./images/backgroundCarnetPc.jpg">
+                    <v-container>
+                        <v-row justify="center" align="center">
+                            <v-col justify="center" align="center" cols="12" sm="12" md="5" lg="5" >
+                                <div class="text-comfortaa mt-15">
+                                    <div>
+                                        <p class="text1">TARJETA DE</p>
+                                        <p class="text2">AFILIADO</p>
+                                    </div>
+                                    <v-row justify="center" align="center">
+                                        <v-col justify="center" align="center" cols="12" sm="12" md="5" lg="7" >
+                                            <div align="start" class="text-comfortaa mt-15 pt-15">
+                                                <p class="titulos text-raleway">Titular: </p>
+                                                <p class="titulos text-raleway">Documento: </p>
+                                                <p class="titulos text-raleway">Sede: </p>
+                                            </div>
+                                        </v-col>
+                                    </v-row>
+                                </div>
+                            </v-col>
+                            <v-col justify="center" align="center" cols="12" sm="12" md="5" lg="7" >
+                                <v-row justify="center" align="center" class="ContenedorTabla">
+                                    <v-col justify="center" align="center" cols="6">
+                                        <div class="headerTabla">
+                                            <p>Beneficiarios</p>
+                                        </div>
+                                    </v-col>
+                                    <v-col justify="center" align="center" cols="6">
+                                        <div class="headerTabla">
+                                            <p>Parentescos</p>
+                                        </div>
+                                    </v-col>
+                                </v-row>
+                            </v-col>
+                        </v-row>
+                        <v-row justify="center" align="center" class="text-raleway font-italic">
+                            <v-col justify="center" align="center" cols="12" lg="8" md="8" sm="11">
+                                <p>Recuerde que: para obtener los beneficios contratados es indispensables estar al día con el pago de las cuotas. El servicio exequial se prestará
+                                 únicamente en la red Los Olivos a nivel nacional. la protección corresponde a las condiciones descritas en el plan contratado.</p>
+                            </v-col>
+                        </v-row>
+                        <v-row justify="center" align="center" class="text-raleway text-footer">
+                            <v-col justify="center" align="center" cols="12" lg="8" md="8" sm="11">
+                                <p>En caso de requerir el servicio contáctenos:</p>
+                                <p>Linea de atención 24 horas: 018000915286-(8)6685286 // www.losolivosvillavicencio.com</p>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-img>
+            </v-container>
+          </v-main>
+        </v-app>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        })
+    </script>
+</body>
+</html>
