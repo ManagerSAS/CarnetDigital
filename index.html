@@ -8,63 +8,441 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <style >
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;0,900;1,300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
         .text-raleway{
             font-family: 'Raleway', sans-serif;
         }
-        .text1{
-            font-weight: 500;
-            font-size: 50px;
-            color: #162b4e;
-        }
         .text-comfortaa{
             font-family: 'Comfortaa', cursive;
         }
-        .text2{
-            font-weight: 900;
-            font-size: 80px;
-            line-height: 1px;
-            color: #162b4e;
-        }
-        .titulos{
-            font-weight: 700;
-            font-size: 50px;
-            line-height: normal;
-            color: #162b4e;
-        }
-        .contenedor{
-            background-image: url('./images/backgroundCarnetPc.jpg');
-            margin: 10px 10px 10px 10px;
-        }
-        .text-data{
-            font-weight: 500;
-            font-size: 30px;
-            color: #162b4e;
-        }
-        .text-footer{
-            font-weight: 800;
-            font-size: 20px;
-            color: #162b4e;
-            line-height: normal;
-        }
-        .intro-content{
-            max-width: 500px;
-            position: flex ;
-            top: 50%;
-        }
-        .headerTabla{
-            width: 100%;
-            height: 40px;
-            background-color: #162b4e;
-            color: white;
-            text-align: center;
-            justify-content: center;
-        }
         .ContenedorTabla{
-            width: 600px;
+            width: 100%;
+        }
+        @media only screen and (min-width: 1600px){
+            .Pc {
+                display: block;
+            }.Laptop
+            {
+                display: none;
+            }
+            .Cel{
+                display: none;
+            }
+            .Cel{
+                display: none;
+            }
+            .bg-img{
+                background-image: url('./images/backgroundCarnetPc.jpg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+             }
+            .text1{
+                font-weight: 500;
+                font-size: 50px;
+                color: #162b4e;
+                line-height: 1.2em;
+            }
+            .text2{
+                font-weight: 900;
+                font-size:80px;
+                line-height: 5px;
+                color: #162b4e;
+            }
+            .titulos{
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 1rem;
+                color: #162b4e;
+            }
+            .datosTitular{
+                font-weight: 600;
+                font-size: 30px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .contentDatos{
+                position: relative;
+                right:20%;
+            }
+            .text-footer1{
+                font-style: italic;
+                font-size: 20px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .text-footer2{
+                font-weight: 900;
+                font-size: 20px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .intro-content{
+                width: 80%;
+            }
+            .headerTabla{
+                width: 49.5%; 
+                height: 30px; 
+                display: inline-block;
+                background-color: #162b4e;
+                color: white;
+                text-align: center;
+                margin: 1px 1px  5px 0px;
+                padding-top: 4px;
+                justify-content: center;
+            }
+           .bodytable{
+                border: 1px solid black;
+                border-radius: 0 0 15px 15px; 
+            }
+        }
+        @media only screen and (min-width: 1200px) and (max-width: 1599px){
+            .Pc {
+                display: none;
+            }.Laptop
+            {
+                display: block;
+            }
+            .Tablet{
+                display: none;
+            }
+            .Cel{
+                display: none;
+            }
+            .bg-img{
+                background-image: url('./images/backgroundCarnetPc.jpg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+             }
+            .text1{
+                font-weight: 500;
+                font-size: 40px;
+                color: #162b4e;
+                line-height: 1.2em;
+            }
+            .text2{
+                font-weight: 900;
+                font-size:70px;
+                line-height: 5px;
+                color: #162b4e;
+            }
+            .titulos{
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 1rem;
+                color: #162b4e;
+            }
+            .datosTitular{
+                font-weight: 600;
+                font-size: 25px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .contentDatos{
+                position: relative;
+                right:20%;
+            }
+            .text-footer1{
+                font-style: italic;
+                font-size: 15px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .text-footer2{
+                font-weight: 900;
+                font-size: 15px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .intro-content{
+                width: 80%;
+            }
+            .headerTabla{
+                width: 49.5%; 
+                height: 30px; 
+                display: inline-block;
+                background-color: #162b4e;
+                color: white;
+                text-align: center;
+                margin: 1px 1px  5px 0px;
+                padding-top: 4px;
+                justify-content: center;
+            }
+           .bodytable{
+                border: 1px solid black;
+                border-radius: 0 0 15px 15px; 
+            }
+        }
+        @media only screen and (min-width: 960px) and (max-width: 1199px) {
+            .Pc {
+                display: block;
+            }.Laptop
+            {
+                display: block;
+            }
+            .Tablet{
+                display: none;
+            }
+            .Cel{
+                display: block;
+            }
+            .bg-img{
+                background-image: url('./images/backgroundCarnetLaptop.jpg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 69%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+             }
+            .text1{
+                font-weight: 500;
+                font-size: 30px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .text2{
+                font-weight: bolder;
+                font-size: 50px;
+                line-height: 1px;
+                color: #162b4e;
+            }
+            .titulos{
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1rem;
+                color: #162b4e;
+            }
+            .datosTitular{
+                font-weight: 600;
+                font-size: 18px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .contentDatos{
+                position: relative;
+                right:20%;
+            }
+            .text-footer1{
+                font-style: italic;
+                font-size: 12px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .text-footer2{
+                font-weight: 800;
+                font-size: 12px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .intro-content{
+                width: 90%;
+                
+            }
+            .headerTabla{
+                width: 49%; 
+                height: 30px; 
+                display: inline-block;
+                background-color: #162b4e;
+                color: white;
+                text-align: center;
+                margin: 1px 1px  5px 0px;
+                padding-top: 4px;
+                justify-content: center;
+            }
+           .bodytable{
+                text-align: center;
+                border: 1px solid #162b4e;
+                border-radius: 0 0 15px 15px; 
+            }
+        }
+        @media only screen and (min-width: 479px) and (max-width: 951px) {
+            .Pc {
+                display: none;
+            }.Laptop
+            {
+                display: none;
+            }
+            .Tablet{
+                display: block;
+            }
+            .Cel{
+                display: block;
+            }
+            .bg-img{
+                background-image: url('./images/backgroundCarnetTablet.jpg');
+                background-size: 100% 100%;
+                height: 95%;
+                width: 95%;
+                background-repeat: no-repeat;
+             }
+            .text1{
+                font-weight: 500;
+                font-size: 50px;
+                color: #162b4e;
+                line-height: 1.5em;
+            }
+            .text2{
+                font-weight: bolder;
+                font-size: 80px;
+                line-height: 2px;
+                color: #162b4e;
+            }
+            .titulos{
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 1rem;
+                color: #162b4e;
+            }
+            .datosTitular{
+                font-weight: 600;
+                font-size: 28px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .contentDatos{
+                position: relative;
+                top: 30px;
+            }
+            .contentTabla{
+                position: relative;
+                left: 10px;
+            }
+            .text-footer1{
+                font-style: italic;
+                font-size: 20px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .text-footer2{
+                font-weight: 900;
+                font-size: 20px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .intro-content{
+                width: 95%;
+                text-align: center;
+            }
+            .headerTabla{
+                width: 49%; 
+                height: 30px; 
+                display: inline-block;
+                background-color: #162b4e;
+                color: white;
+                text-align: center;
+                margin: 1px 1px  5px 0px;
+                padding-top: 4px;
+                justify-content: center;
+            }
+           .bodytable{
+                text-align: center;
+                border: 1px solid #162b4e;
+                border-radius: 0 0 15px 15px; 
+            }
+        }
+        @media only screen and (max-width: 477px) {
+            .Pc {
+                display: none;
+            }.Laptop
+            {
+                display: none;
+            }
+            .Tablet{
+                display: none;
+            }
+            .Cel{
+                display: block;
+            }
+            .bg-img{
+                background-image: url('./images/backgroundCarnetCel.jpg');
+                background-size: 100% 100%;
+                height: 800px;
+                width: 95%;
+                background-repeat: no-repeat;
+                
+             }
+            .text1{
+                font-weight: 500;
+                font-size: 20px;
+                color: #162b4e;
+                line-height: 1em;
+            }
+            .text2{
+                font-weight: bolder;
+                font-size: 40px;
+                line-height: 2px;
+                color: #162b4e;
+            }
+            .titulos{
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 1rem;
+                color: #162b4e;
+            }
+            .datosTitular{
+                font-weight: 600;
+                font-size: 20px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .contentDatos{
+                position: relative;
+                top: 30px;
+                line-height: normal;
+            }
+            .contentTabla{
+                position: relative;
+                left: 10px;
+                top: -10%;
+            }
+            .text-footer1{
+                font-style: italic;
+                font-size: 12px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .text-footer2{
+                font-weight: 900;
+                font-size: 10px;
+                color: #162b4e;
+                line-height: normal;
+            }
+            .intro-content{
+                width: 100%;
+                text-align: center;
+            }
+            .headerTabla{
+                width: 49%; 
+                height: 30px; 
+                display: inline-block;
+                background-color: #162b4e;
+                color: white;
+                text-align: center;
+                margin: 1px 1px  5px 0px;
+                padding-top: 4px;
+                justify-content: center;
+            }
+           .bodytable{
+                text-align: center;
+                border: 1px solid #162b4e;
+                border-radius: 0 0 15px 15px; 
+            }
         }
     </style>
 </head>
@@ -72,63 +450,398 @@
     <div id="app">
         <v-app>
           <v-main>
-            <v-container >
-                <v-img class="rounded-lg elevation-20" src="./images/backgroundCarnetPc.jpg">
-                    <v-container>
+            <v-container  class="rounded-lg elevation-20 bg-img mt-8 mb-10 ">
+                    <div class="intro-content Pc Laptop">
                         <v-row justify="center" align="center">
                             <v-col justify="center" align="center" cols="12" sm="12" md="5" lg="5" >
-                                <div class="text-comfortaa mt-15">
-                                    <div>
-                                        <p class="text1">TARJETA DE</p>
-                                        <p class="text2">AFILIADO</p>
+                                <div class="text-comfortaa contentDatos mt-lg-15">
+                                    <div align="start">
+                                        <p class="text-comfortaa text1 mt-md-10 pt-md-10 ml-md-5 ml-lg-5">TARJETA DE</p>
+                                        <p class="text-raleway text2">AFILIADO</p>
                                     </div>
-                                    <v-row justify="center" align="center">
-                                        <v-col justify="center" align="center" cols="12" sm="12" md="5" lg="7" >
-                                            <div align="start" class="text-comfortaa mt-15 pt-15">
-                                                <p class="titulos text-raleway">Titular: </p>
-                                                <p class="titulos text-raleway">Documento: </p>
-                                                <p class="titulos text-raleway">Sede: </p>
-                                            </div>
-                                        </v-col>
-                                    </v-row>
+                                    <div align="start" class="mt-lg-10 pt-lg-10 mt-xl-15 pt-xl-15 mt-md-10 pt-md-10">
+                                        <p class="text-raleway titulos">Titular: <span class="text-comfortaa datosTitular">Jose Alejandro Sastoque Agudelo</span></p>
+                                        <p class="text-raleway titulos">Documento: <span class="text-comfortaa datosTitular">1006820235</span></p>
+                                        <p class="text-raleway titulos">Sede: <span class="text-comfortaa datosTitular">Serfunllanos</span></p>
+                                    </div>
                                 </div>
                             </v-col>
-                            <v-col justify="center" align="center" cols="12" sm="12" md="5" lg="7" >
-                                <v-row justify="center" align="center" class="ContenedorTabla">
-                                    <v-col justify="center" align="center" cols="6">
-                                        <div class="headerTabla">
-                                            <p>Beneficiarios</p>
+                            <v-col justify="center" align="center" class="mt-15 pt-15" cols="12" sm="12" md="5" lg="5" >
+                                <v-row justify="center" align="center" max-width="80%" >
+                                    <div  class="headerTabla text-comfortaa" >
+                                        Beneficiarios
+                                    </div>
+                                    <div  class="headerTabla text-comfortaa" >
+                                        Parentescos
+                                    </div>
+                                </v-row>
+                                <v-row class="bodytable ">
+                                    <v-col cols="6" >
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandroo
                                         </div>
                                     </v-col>
-                                    <v-col justify="center" align="center" cols="6">
-                                        <div class="headerTabla">
-                                            <p>Parentescos</p>
-                                        </div>
+                                    <v-divider
+                                        vertical
+                                        color="#162b4e"  
+                                    ></v-divider>
+                                    <v-col cols="6">
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
                                     </v-col>
                                 </v-row>
                             </v-col>
                         </v-row>
-                        <v-row justify="center" align="center" class="text-raleway font-italic">
-                            <v-col justify="center" align="center" cols="12" lg="8" md="8" sm="11">
-                                <p>Recuerde que: para obtener los beneficios contratados es indispensables estar al día con el pago de las cuotas. El servicio exequial se prestará
-                                 únicamente en la red Los Olivos a nivel nacional. la protección corresponde a las condiciones descritas en el plan contratado.</p>
+                        <v-row justify="center" align="center" class="mt-lg-15 mt-md-10">
+                            <v-col justify="center" align="center" cols="12" lg="12" md="11" sm="12">
+                                <div class="text-raleway text-footer1">
+                                    <p>Recuerde que: para obtener los beneficios contratados es indispensables estar al día con el pago de las cuotas. El servicio exequial se prestará
+                                     únicamente en la red Los Olivos a nivel nacional. la protección corresponde a las condiciones descritas en el plan contratado.</p>
+                                </div>
+                                <div class="text-comfortaa">
+                                    <p class="text-footer2">
+                                        En caso de requerir el servicio contáctenos:<br>
+                                        Linea de atención 24 horas: 018000915286-(8)6685286 // www.losolivosvillavicencio.com
+                                    </p>
+                                </div>
                             </v-col>
                         </v-row>
-                        <v-row justify="center" align="center" class="text-raleway text-footer">
-                            <v-col justify="center" align="center" cols="12" lg="8" md="8" sm="11">
-                                <p>En caso de requerir el servicio contáctenos:</p>
-                                <p>Linea de atención 24 horas: 018000915286-(8)6685286 // www.losolivosvillavicencio.com</p>
+                    </div>
+                    <div class="intro-content Tablet">
+                        <v-row justify="center" align="center">
+                            <v-col justify="center" align="start" class="pt-15" cols="12" >
+                                <div align="center" class="text-comfortaa pt-15 contentDatos">
+                                    <div >
+                                        <p class="text-comfortaa text1 ">TARJETA DE</p>
+                                        <p class="text-raleway text2">AFILIADO</p>
+                                    </div>
+                                    <div align="start" class="ml-5 mt-10 pt-10">
+                                        <p class="text-raleway titulos">Titular: <span class="text-comfortaa datosTitular">Jose Alejandro Sastoque Agudelo</span></p>
+                                        <p class="text-raleway titulos">Documento: <span class="text-comfortaa datosTitular">1006820235</span></p>
+                                        <p class="text-raleway titulos">Sede: <span class="text-comfortaa datosTitular">Serfunllanos</span></p>
+                                    </div>
+                                </div>
+                            </v-col>
+                            <v-col justify="center" align="center" class="mt-10 contentTabla" cols="10" >
+                                <v-row justify="center" align="center" >
+                                    <div  class="headerTabla text-comfortaa" >
+                                        Beneficiarios
+                                    </div>
+                                    <div  class="headerTabla text-comfortaa" >
+                                        Parentescos
+                                    </div>
+                                </v-row>
+                                <v-row class="bodytable ">
+                                    <v-col cols="6" >
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandroo
+                                        </div>
+                                    </v-col>
+                                    <v-divider
+                                        vertical
+                                        color="#162b4e"  
+                                    ></v-divider>
+                                    <v-col cols="6">
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                    </v-col>
+                                </v-row>
+                            </v-col> 
+                        </v-row>
+                        <v-row justify="center" align="center" class="ml-5 mt-15 mt-10">
+                            <v-col justify="center" align="center" cols="12">
+                                <div justify="center" align="center" class="text-raleway text-footer1">
+                                    <p>Recuerde que: para obtener los beneficios contratados es indispensables estar al día con el pago de las cuotas. El servicio exequial se prestará
+                                     únicamente en la red Los Olivos a nivel nacional. la protección corresponde a las condiciones descritas en el plan contratado.</p>
+                                </div>
+                                <div class="text-comfortaa">
+                                    <p class="text-footer2">
+                                        En caso de requerir el servicio contáctenos:<br>
+                                        Linea de atención 24 horas: 018000915286-(8)6685286 // www.losolivosvillavicencio.com
+                                    </p>
+                                </div>
                             </v-col>
                         </v-row>
-                    </v-container>
-                </v-img>
+                    </div>
+                    <div class="intro-content Cel">
+                        <v-row justify="center" align="center">
+                            <v-col justify="center" align="start" class="pt-15" cols="12" >
+                                <div align="center" class="text-comfortaa contentDatos">
+                                    <div >
+                                        <p class="text-comfortaa text1 ">TARJETA DE</p>
+                                        <p class="text-raleway text2">AFILIADO</p>
+                                    </div>
+                                    <div align="start" class="ml-5 mt-10">
+                                        <p class="text-raleway titulos">Titular: <span class="text-comfortaa datosTitular">Jose Alejandro Sastoque Agudelo</span></p>
+                                        <p class="text-raleway titulos">Documento: <span class="text-comfortaa datosTitular">1006820235</span></p>
+                                        <p class="text-raleway titulos">Sede: <span class="text-comfortaa datosTitular">Serfunllanos</span></p>
+                                    </div>
+                                </div>
+                            </v-col>
+                            <v-col justify="center" align="center" class="contentTabla mt-8" cols="10" >
+                                <v-row justify="center" align="center" >
+                                    <div  class="headerTabla text-comfortaa" >
+                                        Beneficiarios
+                                    </div>
+                                    <div  class="headerTabla text-comfortaa" >
+                                        Parentescos
+                                    </div>
+                                </v-row>
+                                <v-row class="bodytable ">
+                                    <v-col cols="6" >
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandro
+                                        </div>
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Alejandroo
+                                        </div>
+                                    </v-col>
+                                    <v-divider
+                                        vertical
+                                        color="#162b4e"  
+                                    ></v-divider>
+                                    <v-col cols="6">
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                        <v-divider
+                                            color="#162b4e"  
+                                        ></v-divider>
+                                        <div >
+                                            Hijo
+                                        </div>   
+                                    </v-col>
+                                </v-row>
+                            </v-col> 
+                        </v-row>
+                        <v-row justify="center" align="center" >
+                            <v-col justify="center" align="center" cols="12">
+                                <div justify="center" align="start" class="text-raleway ml-5 mt-8 text-footer1">
+                                    <p>Recuerde que: para obtener los beneficios contratados es indispensables estar al día con el pago de las cuotas. El servicio exequial se prestará
+                                     únicamente en la red Los Olivos a nivel nacional. la protección corresponde a las condiciones descritas en el plan contratado.</p>
+                                </div>
+                                <div class="text-comfortaa">
+                                    <p class="text-footer2 mt-10 ml-5">
+                                        En caso de requerir el servicio contáctenos:<br>
+                                        Linea de atención 24 horas: 018000915286-(8)6685286 // www.losolivosvillavicencio.com
+                                    </p>
+                                </div>
+                            </v-col>
+                        </v-row>
+                    </div>
             </v-container>
           </v-main>
         </v-app>
       </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script>
         new Vue({
         el: '#app',
